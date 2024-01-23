@@ -34,16 +34,16 @@ header {
     text-align: center;
     width: 100%;
 }
+
 header + div {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1.06fr 5fr;
 }
 
 li {
     list-style-type: none;
-    padding: 0.7rem;
-    margin-right: 0.7rem;
 }
+
 main {
     margin-top: 1rem;
 }
@@ -54,12 +54,14 @@ ul {
 }
 
 a {
-    vertical-align: top;
+    display: block;
     text-decoration: none;
     color: teal;
+    padding: 10px;
 }
-aside {
-    vertical-align: top;
+a:hover {
+    background-color: teal;
+    color: white;
 }
 main > p {
     font-size: 0.8em;
@@ -70,9 +72,13 @@ img {
     width: 175px;
     height: 125px;
     padding: 1rem;
+    padding-left: 0;
 }
-
+main {
+    padding-left: 30px;
+}
 footer {
+    display: grid;
     text-align: center;
     background-color: teal;
     text-align: center;
@@ -82,7 +88,6 @@ footer {
     bottom: 0;
 }
 
-
 @media screen and (max-width: 600px) {
     header + div {
         display: inline-block;
@@ -90,14 +95,31 @@ footer {
 
     ul {
         display: flex;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0;
+    }
+    li {
+        border-right: 2px solid lightgray;
+    }
+    li:last-child {
+        border-right: 0;
     }
 
+    a {
+        display: inline-block;
+        padding: 10px 15px;
+    }
     form {
         border: 1px solid #ccc;
         padding: 1rem;
         width: 170%;
     }
+    main {
+        padding-left: 10px;
+    }
     .img {
-        padding: 0;
+        padding-left:1.5px;
+        padding-top: 0;
     }
 }
