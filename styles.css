@@ -28,16 +28,21 @@ form button {
     margin-left: auto;
 }
 
+body {
+    max-width: 900px;
+    margin: auto;
+    border: 1px solid gray;
+}
+
 header {
     background-color: teal;
     padding: 1rem;
     text-align: center;
-    width: 100%;
 }
 
 header + div {
     display: grid;
-    grid-template-columns: 1.06fr 5fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 li {
@@ -81,9 +86,8 @@ footer {
     display: grid;
     text-align: center;
     background-color: teal;
-    text-align: center;
     color: white;
-    width: 100%;
+    width: 900px;
     position: fixed;
     bottom: 0;
 }
@@ -121,5 +125,8 @@ footer {
     .img {
         padding-left:1.5px;
         padding-top: 0;
+    }
+    footer {
+        width: 100%;
     }
 }
